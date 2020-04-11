@@ -8,6 +8,7 @@ class PyramidSpec extends AnyFlatSpec with Matchers {
     buildPyramid(5, 1) should be(expected)
     buildPyramidFold(5, 1) should be(expected)
     buildPyramidFoldAnotherSyntax(5, 1) should be(expected)
+    buildPyramidTyped(5, 1) should be(expected)
   }
 
   it should "fill length and height" in {
@@ -19,6 +20,7 @@ class PyramidSpec extends AnyFlatSpec with Matchers {
     buildPyramid(5, 3) should be(expected)
     buildPyramidFold(5, 3) should be(expected)
     buildPyramidFoldAnotherSyntax(5, 3) should be(expected)
+    buildPyramidTyped(5, 3) should be(expected)
   }
 
   it should "leave blank lines if height is too much" in {
@@ -32,6 +34,7 @@ class PyramidSpec extends AnyFlatSpec with Matchers {
     buildPyramid(5, 5) should be(expected)
     buildPyramidFold(5, 5) should be(expected)
     buildPyramidFoldAnotherSyntax(5, 5) should be(expected)
+    buildPyramidTyped(5, 5) should be(expected)
   }
 
   it should "strip lines if height is not enough" in {
@@ -43,6 +46,7 @@ class PyramidSpec extends AnyFlatSpec with Matchers {
     buildPyramid(7, 3) should be(expected)
     buildPyramidFold(7, 3) should be(expected)
     buildPyramidFoldAnotherSyntax(7, 3) should be(expected)
+    buildPyramidTyped(7, 3) should be(expected)
   }
 
   it should "handle even length" in {
@@ -54,5 +58,6 @@ class PyramidSpec extends AnyFlatSpec with Matchers {
     buildPyramid(4, 3) should be(expected)
     buildPyramidFold(4, 3) should be(expected)
     buildPyramidFoldAnotherSyntax(4, 3) should be(expected)
+    buildPyramidTyped(4, 3) should be(expected)
   }
 }

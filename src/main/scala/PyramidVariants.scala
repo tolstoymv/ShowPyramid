@@ -35,4 +35,22 @@ object PyramidVariants {
     }.mkString("\n")
   }
 
+
+  //type based option
+  class Pyramid(length: Int, height: Int) {
+    private val lines = (0 until height).map(new PyramidLine(_, length)).reverse
+
+    override def toString: String = lines.mkString("\n")
+  }
+
+  class PyramidLine(padding: Int, length: Int) {
+    override def toString: String = {
+      val numberOfX = length - 2 * padding
+      val line = List.fill(padding)('-') ++ List.fill(numberOfX)('x') ++ List.fill(padding)('-')
+      line.slice(0, length).mkString
+    }
+  }
+
+  def buildPyramidTyped(length: Int, height: Int): String = new Pyramid(length, height).toString
+
 }
